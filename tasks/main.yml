@@ -1,0 +1,19 @@
+---
+# tasks file for net2grid.platform_config
+- name: Create config directory
+  file:
+    path: /var/www/sites/_config
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: 0755
+
+
+- name: Copy platform config templates
+  template:
+    src: "{{ item }}.j2"
+    dest: "/var/www/sites/_config/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items: "{{ platform_configuration_files }}"

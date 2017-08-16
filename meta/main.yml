@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Remco Brink
+  description: Deploys platform configuration files, based on a template
+  license: license (BSD, MIT)
+  min_ansible_version: 2.0
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  galaxy_tags:
+    - ldap
+
